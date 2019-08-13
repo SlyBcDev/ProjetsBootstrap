@@ -1,22 +1,33 @@
 <!-- ENTETE -->
 <header>
-  <nav>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  <nav class="navbar bg-dark p-3">
     <div class="container">
-      <img src="img/logo_tesla.png" style="height: 30px" />
+      <img
+        src="img/logo_tesla.png"
+        style="height: 30px"
+        class="d-block mx-auto"
+      />
     </div>
   </nav>
 </header>
 
 <!-- ICI : jumbotron -->
 <div
-  style="background: center/cover url('https://believemy.com/uploads/126d05180ddf6f2ea67c8b669855bf89_e45c0e92710b43b3b938ed8fc4938f71.png')"
+  class="jumbotron text-white"
+  style="background: center/cover url('https://images.caradisiac.com/logos/3/8/4/1/253841/S0-tesla-nouveau-moteur-et-plus-d-autonomie-pour-les-model-s-et-x-175911.jpg')"
 >
   <div class="container">
-    <h1>Bienvenue.</h1>
-    <p>
+    <h1 class="display-4">Bienvenue.</h1>
+    <p class="lead">
       Le site Tesla vous permet de commander vos fusées et vos voitures, même
       lorsque vous êtes dans votre canapé.
-      <span>Un conseillé est en ligne.</span>
+      <span class="badge badge-success">conseillé est en ligne. </span>
     </p>
   </div>
 </div>
@@ -25,16 +36,26 @@
 <section>
   <div class="container">
     <!-- ICI : progress bar-->
-
+    <div class="progress">
+      <div class="progress-bar-striped bg-danger" style="width:40%"></div>
+    </div>
     <!-- ICI : alerte -->
-    <div>
+    <div class="alert alert-primary">
       Bienvenue sur Tesla. Ce site est en maintenance.
       <hr />
       <!-- ICI : les deux boutons -->
+      <div class="btn-group btn-block">
+        <a href="" class="btn btn-danger px-auto">Suivre les avancements</a>
+        <a href="" class="btn btn-success px-auto">Nous contacter</a>
+      </div>
     </div>
 
     <nav>
       <!-- ICI : fil d'ariane -->
+      <ol class="breadcrumb mt-1">
+        <li class="breadcrumb-item"><a href="">Accueil</a></li>
+        <li class="breadcrumb-item active">Maintenance</li>
+      </ol>
     </nav>
   </div>
 </section>
@@ -43,29 +64,61 @@
 <section>
   <div class="container">
     <!-- ICI : les cartes -->
-
-    <div>
-      <img
-        src="https://believemy.com/uploads/c7fe8837368024dc01e1845337f167e9_18fb807dabb97a3e4f920d1b0c9176b1.png"
-        alt="..."
-      />
-    </div>
-
-    <div>
-      <img
-        src="https://believemy.com/uploads/c7fe8837368024dc01e1845337f167e9_18fb807dabb97a3e4f920d1b0c9176b1.png"
-        alt="..."
-      />
+    <div class="card-deck">
+      <span class="card text-left">
+        <img src="img/carte_tesla.png" class="card-img-top" />
+        <div class="card-body bg-secondary text-white">
+          <h5 class="card-title">
+            Nouveautés
+          </h5>
+          <div class="card-text">
+            Vous pourrez bientôt acheter des fusées pour aller sur la lune
+          </div>
+        </div>
+      </span>
+      <span class="card text-left">
+        <img src="img/carte_tesla.png" class="card-img-top" />
+        <div class="card-body bg-secondary text-white">
+          <h6 class="card-title">
+            Information
+          </h6>
+          <div class="card-text">
+            Les 30 premiers acheteurs de fusées partiront avec Elon Musk
+          </div>
+        </div>
+      </span>
     </div>
   </div>
 </section>
 
 <!-- TROISIEME SECTION -->
-<section>
-  <div style="width: 400px">
+<section class="bg-dark text-white p-5 mt-3">
+  <div class="mx-auto" style="width: 400px">
     <h2>Contactez-nous</h2>
     <!-- ICI : formulaire -->
+    <div class="form-group">
+      <label>Adresse email</label>
+      <input
+        type="text"
+        name="email"
+        placeholder="Entrez votre adresse email"
+        class="form-control"
+      />
+      <small class="form-text text-muted">
+        Nous ne partagerons pas votre adresse email
+      </small>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea class="form-control" rows="3"></textarea>
+      <button class="btn btn-outline-light mt-3">Soumettre</button>
+    </div>
   </div>
 </section>
 
 <!-- ICI : pied de page -->
+<footer class="bg-secondary text-black p-3">
+  <div class="container">
+    2019 © Tesla
+  </div>
+</footer>
